@@ -183,3 +183,7 @@ class Rating:
 async def get_rating(data: ProfInput) -> list[Rating]:
     ratings = await get_teacher_info(data.prof_link)
     return ratings
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host="0.0.0.0", port=port)
